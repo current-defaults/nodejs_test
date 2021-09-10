@@ -1,3 +1,5 @@
 FROM debian:buster
-RUN apt-get update && apt-get install nodejs npm -y
-CMD ['npm']
+RUN apt update && apt upgrade -y 
+RUN apt install -y nodejs npm
+RUN npm install npm@latest -g
+CMD ["npm"]
